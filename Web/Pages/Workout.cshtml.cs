@@ -77,7 +77,6 @@ namespace Web.Pages
         public bool Yoga { get; set; }
         public bool GymMachine { get; set; } = true;
         public bool FreeWeights { get; set; }
-        public bool None { get; set; }
         public string WorkoutDays { get; set; } = "1";
         public string WorkoutTime { get; set; } = "1";
         public string ActivityLevel { get; set; } = "Very Active";

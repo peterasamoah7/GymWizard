@@ -46,7 +46,6 @@ namespace Web.Services
         public async Task<string> GenerateMealPlan(string userPreference)
         {
             string generateMealPlanPrompt = """
-            Generate a 2000 kcal calorie meal plan
             {0}
             If you can not generate a workout session simply return: False
             If you can generate a work session, 

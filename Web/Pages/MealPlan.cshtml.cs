@@ -33,11 +33,9 @@ namespace Web.Pages
         {
             StringBuilder sb = new();
 
-            sb.AppendLine($"My goal for this meal plan is for {mealPlanAnswer.Goal}");
-            sb.AppendLine($"I want to meal plan to have a calorie estimate of {mealPlanAnswer.Calories}");
+            sb.AppendLine($"Generate a meal plan with a calorie estimate of {mealPlanAnswer.Calories}");
             sb.AppendLine($"{mealPlanAnswer.EatingSchedule}");
             sb.AppendLine($"My macronutrient preference for this plan is: {mealPlanAnswer.MacroNutrientsPref}");
-            sb.AppendLine($"{mealPlanAnswer.IncludeCheatMeal}");
             sb.AppendLine("Do not include a workout session. Only meal plan.");
             sb.AppendLine("Generate 3 different meal plans");
 
@@ -46,11 +44,9 @@ namespace Web.Pages
     }
 
     public class MealPlanAnswer
-    {        
-        public string Goal { get; set; }
-        public string Calories { get; set; }
-        public string EatingSchedule { get; set; }
-        public string MacroNutrientsPref { get; set; }
-        public bool IncludeCheatMeal { get; set; }
+    {
+        public string Calories { get; set; } = "1700";
+        public string EatingSchedule { get; set; } = "Yes, include intermittent fasting";
+        public string MacroNutrientsPref { get; set; } = "Low-carb";
     }
 }

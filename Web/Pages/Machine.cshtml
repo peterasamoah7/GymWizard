@@ -1,6 +1,7 @@
 ﻿@page
 @model Web.Pages.MachineModel
 @{
+    ViewData["Title"] = "Machine Finder";
 }
 
 <div>
@@ -12,8 +13,7 @@
     </div>
 
     <div>
-        <h1 class="text-body-emphasis">Machine? We got you!</h1>
-        <p class="fs-5 col-md-8">TBA</p>
+        <h1 class="text-body-emphasis">Unknown Machine? We got you!</h1>        
 
         <hr class="col-3 col-md-2 mb-5" />
     </div>
@@ -24,7 +24,7 @@
         {
             string imageSrc = $"data:image/png;base64,{Model.Image}";
 
-            <img alt="Uploaded image" width="500" height="600" class="rounded mx-auto d-block" src="@imageSrc" />
+            <img alt="Uploaded image" class="img-fluid" src="@imageSrc" width="400" height="400" />
             <br/><br/>
         }
 
@@ -34,9 +34,10 @@
     {
         <div class="mb-3">
             <form method="post" enctype="multipart/form-data">
-                <input type="file" asp-for="FileUpload" id="formFile" class="form-control" />
-                <label for="formFile" class="form-label">Default file input example</label>
-                <input type="submit" />
+                <div class="g-3 mb-3 w-25">
+                    <input type="file" asp-for="FileUpload" id="formFile" class="form-control" />
+                </div>                
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
     }
