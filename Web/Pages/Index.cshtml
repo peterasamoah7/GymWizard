@@ -1,0 +1,63 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+    </symbol>
+</svg>
+
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="gymwiz.svg" alt="" width="72" height="57">
+    <h1 class="display-5 fw-bold text-body-emphasis">Gym Wizard</h1>
+    <div class="col-lg-8 mx-auto">
+        <p class="lead mb-4">
+            Gym Wizard is an online AI tool powered by OpenAI. The goal of this project is
+            to demonstrate how generative AI can be used in providing quick and easy advise for beginner
+            and experienced gym goers. Gym Wizard can generate a workout plan, recommend meal plans to
+            help you meet your calorie deficit and also identify and advise on how to use gym machines
+            and equipments.
+        </p>
+    </div>
+</div>
+<div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom">Features</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="feature col">
+            <div class="d-inline-flex align-items-center justify-content-center">
+                <img class="d-block mx-auto mb-4" src="workout.svg" alt="workout icon" width="72" height="57">
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Workout Builder</h3>
+            <p>Build a workout session for the day.</p>
+            <a href="/workout" class="icon-link">
+                Try it out
+                <svg class="bi"><use xlink:href="#chevron-right" /></svg>
+            </a>
+        </div>
+        <div class="feature col">
+            <div class="d-inline-flex align-items-center justify-content-center">
+                <img class="d-block mx-auto mb-4" src="mealplan.svg" alt="" width="72" height="57">
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Meal Plan Builder</h3>
+            <p>Build a meal plan to meet your calorie deficit goals.</p>
+            <a href="/mealplan" class="icon-link">
+                Try it out
+                <svg class="bi"><use xlink:href="#chevron-right" /></svg>
+            </a>
+        </div>
+        <div class="feature col">
+            <div class="d-inline-flex align-items-center justify-content-center">
+                <img class="d-block mx-auto mb-4" src="gymmachine.svg" alt="" width="72" height="57">
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Machine Finder</h3>
+            <p>Identify a machine and gain advise on how to get the best out of it.</p>
+            <a href="/machine" class="icon-link">
+                Try it out
+                <svg class="bi"><use xlink:href="#chevron-right" /></svg>
+            </a>
+        </div>
+    </div>
+</div>

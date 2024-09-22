@@ -1,0 +1,199 @@
+﻿@page
+@model Web.Pages.WorkoutModel
+@{
+}
+
+
+<div>
+    <div class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
+            <img class="d-block mx-auto" src="workout.svg" alt="workout icon" width="36" height="28">
+            <span class="fs-4">Workout Builder</span>
+        </a>
+    </div>
+
+    <div>
+        <h1 class="text-body-emphasis">Lets build that workout!</h1>
+        <p class="fs-5 col-md-8">TBA</p>
+
+        <hr class="col-3 col-md-2 mb-5">
+    </div>
+    
+    @if(!string.IsNullOrEmpty(Model.Result))
+    {
+        @if(Model.Result == "False")
+        {
+            <p>An error occurred @{
+                    string sad = ":(";
+                } @sad. Please refresh and try again.</p>
+        }
+        else
+        {
+            @Html.Raw(Model.Result)
+        }        
+    }
+    else
+    {
+
+        <form method="post" class="row g-3">
+            <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-6 pt-0">1. What are your main fitness goals?</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.Fitness" value="Weight loss">
+                        Weight loss
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.Fitness" value="Muscle gain">
+                        Muscle gain
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.Fitness" value="Endurance">
+                        Endurance
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.Fitness" value="Flexibility">
+                        Flexibility
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-6 pt-0">2. Do you have any specific areas of your body you want to focus on?</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="WorkoutAnswer.Arm">
+                        Arms
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="WorkoutAnswer.Core">
+                        Core
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="WorkoutAnswer.Legs">
+                        Legs
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="WorkoutAnswer.Back">
+                        Back
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-6 pt-0">3. Have you worked out before? If so, how long have you been exercising?</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.WorkoutHistory" value="Regularly">
+                        Regularly
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.WorkoutHistory" value="Once every few days">
+                        Once every few days
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.WorkoutHistory" value="Barely">
+                        Barely
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-6 pt-0">4. What types of exercise do you enjoy or feel comfortable with?</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="WorkoutAnswer.Weightlifting">
+                        Weightlifting
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="WorkoutAnswer.Cardio">
+                        Cardio
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="WorkoutAnswer.Yoga">
+                        Yoga
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-6 pt-0">5. Have you used gym machines or free weights before?</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="WorkoutAnswer.GymMachine">
+                        Gym machines
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="WorkoutAnswer.FreeWeights">
+                        Free weights
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="WorkoutAnswer.None">
+                        None
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-6 pt-0">6. How many days a week can you dedicate to working out? We recommend a maximum of 3 days.</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.WorkoutDays" value="1">
+                        1 day
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.WorkoutDays" value="2">
+                        2 days
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.WorkoutDays" value="3">
+                        3 days
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-6 pt-0">7. How long can you spend at the gym each session? We recommend a maximum of 4 hrs.</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.WorkoutTime" value="1">
+                        1 hr
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.WorkoutTime" value="2">
+                        2 hrs
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.WorkoutTime" value="3">
+                        3 hrs
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.WorkoutTime" value="4">
+                        4 hrs
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-6 pt-0">8. What’s your current activity level outside the gym?</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.ActivityLevel" value="Very Active">
+                        Very Active
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.ActivityLevel" value="Moderatively Active">
+                        Moderatively Active
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="WorkoutAnswer.ActivityLevel" value="Barley Active">
+                        Barley Active
+                    </div>
+                </div>
+            </fieldset>
+
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    }
+
+</div>
