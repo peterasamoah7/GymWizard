@@ -51,9 +51,9 @@ Gym Wizard is an online AI tool powered by OpenAI. The goal of this project is t
 Gym Wizard can generate a workout plan, recommend meal plans to help you meet your calorie deficit and also identify and advise on how to use gym machines and equipments.
 
 Feature
-Workout Builder: Gym Wizard can generate tailored based on user input workout sessions with clear descriptions. 
-Mean Plan Builder: Gym Wizard can generate meal plans to help users meet their calories goals based on estimateed calories and preferred macros. 
-Machine Finder: Gym Wizard can generate benefical information on gym machine by anlysing upload image.
+* Workout Builder: Gym Wizard can generate tailored based on user input workout sessions with clear descriptions. 
+* Mean Plan Builder: Gym Wizard can generate meal plans to help users meet their calories goals based on estimateed calories and preferred macros. 
+* Machine Finder: Gym Wizard can generate benefical information on gym machine by anlysing upload image.
 
 You can view the demo [here](https://youtu.be/suaMCUWgQpw)
 
