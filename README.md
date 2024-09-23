@@ -72,16 +72,15 @@ To run the application locally, please follow the steps below.
 
 ### Prerequisites
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/)
+* [Visual Studio 2022](https://visualstudio.microsoft.com/)
 * [OpenAI Developer account](https://platform.openai.com/docs/overview)
 
 
 ### Setup
 
 1. Clone the repo 
-2. Create a developer account at [Expert AI](https://developer.expert.ai/)
-3. Create an OpenAI Developer Account at [OpenAI](https://azure.microsoft.com/) or use an existing one. 
-5. Update `appsettings.json`
+2. Create an OpenAI Developer Account at [OpenAI](https://azure.microsoft.com/) or use an existing one. 
+3. Update `appsettings.json`
   ```sh
   {
   "Logging": {
