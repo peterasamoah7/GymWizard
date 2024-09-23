@@ -33,9 +33,9 @@ namespace Web.Pages
         {
             StringBuilder sb = new();
 
-            sb.AppendLine($"Generate a meal plan with a calorie estimate of {mealPlanAnswer.Calories}");
+            sb.AppendLine($"Generate a meal plan with a calorie sum that is less than or equal to {mealPlanAnswer.Calories} kcal");
             sb.AppendLine($"{mealPlanAnswer.EatingSchedule}");
-            sb.AppendLine($"My macronutrient preference for this plan is: {mealPlanAnswer.MacroNutrientsPref}");
+            sb.AppendLine($"{mealPlanAnswer.MacroNutrientsPref}");
             sb.AppendLine("Do not include a workout session. Only meal plan.");
             sb.AppendLine("Generate 3 different meal plans");
 

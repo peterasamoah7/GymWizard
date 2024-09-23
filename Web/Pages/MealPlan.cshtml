@@ -26,13 +26,16 @@
             <p>
                 An error occurred @{
                     string sad = ":(";
-                }. Please refresh and try again @sad
+                }. Please go back and try again @sad
             </p>
         }
         else
         {
-            @Html.Raw(Model.Result)           
-        }
+            @Html.Raw(Model.Result)      
+        }       
+        
+        <br/>
+        <a href="/mealplan" class="btn btn-primary" role="button" aria-pressed="true">Go Back</a>
     }
     else
     {
@@ -67,11 +70,11 @@
                     <legend class="col-form-label col-sm-6 pt-0">2. Are you comfortable with intermittent fasting?</legend>
                     <div class="col-sm-10">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" asp-for="MealPlanAnswer.EatingSchedule" value="Yes, include intermittent fasting">
+                            <input class="form-check-input" type="radio" asp-for="MealPlanAnswer.EatingSchedule" value="Yes, include intermittent fasting in my meal plan">
                             Yes, include intermittent fasting
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" asp-for="MealPlanAnswer.EatingSchedule" value="No, intermittent fasting doesn't work for me">
+                            <input class="form-check-input" type="radio" asp-for="MealPlanAnswer.EatingSchedule" value="No, do not include intermittent fasting in my meal plan">
                             No, intermittent fasting doesn't work for me
                         </div>
                     </div>
@@ -81,11 +84,11 @@
                     <legend class="col-form-label col-sm-6 pt-0">3. Do you have a specific macronutrient preference?</legend>
                     <div class="col-sm-10">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" asp-for="MealPlanAnswer.MacroNutrientsPref" value="Low-carb">
+                            <input class="form-check-input" type="radio" asp-for="MealPlanAnswer.MacroNutrientsPref" value="I want my meal plan to focus on meals that are low in carbohydrates">
                             Low-carb
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" asp-for="MealPlanAnswer.MacroNutrientsPref" value="Higher-protein">
+                            <input class="form-check-input" type="radio" asp-for="MealPlanAnswer.MacroNutrientsPref" value="I want my meal plan to focus on meals that are high in protein">
                             Higher-protein
                         </div>
                     </div>
