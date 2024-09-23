@@ -33,7 +33,12 @@ namespace Web.Pages
                 Result = "<p>Sorry this is not a gym machine or equipment. Upload another other image and retry :)";
             }
            
-            Result = result.Replace("`", string.Empty).Replace("html", string.Empty).ToString();
+            Result = result
+                .Replace("`", string.Empty)
+                .Replace("< lang=\"en\">", string.Empty)
+                .Replace("html", string.Empty)
+                .ToString();
+
             Image = Convert.ToBase64String(ms.ToArray());
 
             Reset();

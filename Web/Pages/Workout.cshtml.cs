@@ -22,7 +22,10 @@ namespace Web.Pages
 
             var result = await gymWizardService.GenerateWorkoutSession(workoutUserPreferences);
 
-            Result = result.Replace("`", string.Empty).Replace("html", string.Empty).ToString();
+            Result = result
+                .Replace("`", string.Empty)
+                .Replace("< lang=\"en\">", string.Empty)
+                .Replace("html", string.Empty).ToString();
 
             WorkoutAnswer = new WorkoutAnswer();
         }

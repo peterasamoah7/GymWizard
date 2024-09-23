@@ -22,7 +22,11 @@ namespace Web.Pages
 
             var result = await gymWizardService.GenerateMealPlan(mealPlanUserPreferences);
 
-            Result = result.Replace("`", string.Empty).Replace("html", string.Empty).ToString();
+            Result = result
+                .Replace("`", string.Empty)
+                .Replace("html", string.Empty)
+                .Replace("< lang=\"en\">", string.Empty)
+                .ToString();
 
             Reset();
         }
@@ -34,7 +38,6 @@ namespace Web.Pages
             StringBuilder sb = new();
 
             sb.AppendLine($"Generate a meal plan with a calorie sum that is less than or equal to {mealPlanAnswer.Calories} kcal");
-            sb.AppendLine($"{mealPlanAnswer.EatingSchedule}");
             sb.AppendLine($"{mealPlanAnswer.MacroNutrientsPref}");
             sb.AppendLine("Do not include a workout session. Only meal plan.");
             sb.AppendLine("Generate 3 different meal plans");
