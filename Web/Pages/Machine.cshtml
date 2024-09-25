@@ -28,7 +28,19 @@
             <br/><br/>
         }
 
-        @Html.Raw(Model.Result)
+        if (Model.Result == "False")
+        {
+            <p>@{
+                    string sad = ":(";
+                } Sorry this image is not a gym equipment or known to the wizard. Please try again 
+                with a different image @sad</p>
+        }
+        else
+        {
+            @Html.Raw(Model.Result)
+        }
+
+        
 
         <br />
         <a href="/machine" class="btn btn-primary" role="button" aria-pressed="true">Go Back</a>
