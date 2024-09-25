@@ -55,7 +55,7 @@ Feature
 * Mean Plan Builder: Gym Wizard can generate meal plans to help users meet their calories goals based on estimateed calories and preferred macros. 
 * Machine Finder: Gym Wizard can generate benefical information on gym machine by anlysing upload image.
 
-You can view the demo [here](https://youtu.be/suaMCUWgQpw)
+You can view the demo [here](https://youtu.be/qby03I6moJ4)
 
 You can try the live application here [Live site](https://gymwizard.azurewebsites.net)
 
@@ -103,7 +103,7 @@ To run the application locally, please follow the steps below.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Please refer to the [demo](https://youtu.be/suaMCUWgQpw)
+Please refer to the [demo](https://youtu.be/qby03I6moJ4)
 
 <!-- LICENSE -->
 ## License
